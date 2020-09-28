@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="mylearnsql@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.19">
+    <root id="1">
+      <ServerVersion>8.0.21</ServerVersion>
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="information_schema"/>
+    <schema id="3" parent="1" name="library"/>
+    <schema id="4" parent="1" name="mylearnsql">
+      <Current>1</Current>
+    </schema>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="new_schema"/>
+    <schema id="7" parent="1" name="oma"/>
+    <schema id="8" parent="1" name="performance_schema"/>
+    <schema id="9" parent="1" name="users"/>
+    <schema id="10" parent="1" name="weekop"/>
+    <schema id="11" parent="1" name="word"/>
+    <schema id="12" parent="1" name="world"/>
+    <table id="13" parent="4" name="order"/>
+    <table id="14" parent="4" name="person"/>
+    <table id="15" parent="4" name="sale"/>
+    <column id="16" parent="13" name="idPerson">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="13" name="idOrder">
+      <Position>2</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="13" name="quantityPurchased">
+      <Position>3</Position>
+      <Comment>Zakupiona ilość PRODUKTU</Comment>
+      <DataType>BIGINT(19)|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="13" name="pricePerItem">
+      <Position>4</Position>
+      <DataType>BIGINT(19)|-5s</DataType>
+    </column>
+    <index id="20" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idPerson
+idOrder</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="21" parent="13" name="prize_UNIQUE">
+      <ColNames>quantityPurchased</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="22" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idPerson
+idOrder</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="23" parent="13" name="prize_UNIQUE">
+      <ColNames>quantityPurchased</ColNames>
+    </key>
+    <column id="24" parent="14" name="idPerson">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="14" name="firstName">
+      <Position>2</Position>
+      <DataType>VARCHAR(45)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="14" name="lastName">
+      <Position>3</Position>
+      <DataType>VARCHAR(45)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="27" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idPerson</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="28" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idPerson</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="15" name="idsale">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="15" name="clientName">
+      <Position>2</Position>
+      <DataType>VARCHAR(45)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="15" name="clientLastName">
+      <Position>3</Position>
+      <DataType>VARCHAR(45)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="15" name="quantity">
+      <Position>4</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="15" name="prizePerItem">
+      <Position>5</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="34" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idsale</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="35" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idsale</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
