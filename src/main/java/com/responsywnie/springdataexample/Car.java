@@ -21,6 +21,12 @@ public class Car {
     public Car() {
     }
 
+    public Car(String mark, String model, Color color) {
+        this.mark = mark;
+        this.model = model;
+        this.color = color;
+    }
+
     public Long getId() {
         return id;
     }
